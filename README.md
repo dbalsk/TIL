@@ -4,7 +4,7 @@
 >작성기간은 2024.12.14 ~ 입니다.
 
 ## **일일 기록**
-* 2024.12
+* [2024.12](https://github.com/dbalsk/TIL/blob/main/TIL/2024-12.md)
 
 ## **Java**
 * [입출력 비교](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%9E%85%EC%B6%9C%EB%A0%A5%20%EB%B9%84%EA%B5%90.md)
