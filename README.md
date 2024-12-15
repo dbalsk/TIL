@@ -8,7 +8,7 @@
 
 ## **Java**
 * [입출력 비교](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%9E%85%EC%B6%9C%EB%A0%A5%20%EB%B9%84%EA%B5%90.md)
-* 메모리 구조
+* [메모리 구조](https://github.com/dbalsk/TIL/blob/main/JAVA/%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%A3%BC%EC%86%8C.md)
 * 동일성/동등성
 * 클래스
     * 클래스 구조
