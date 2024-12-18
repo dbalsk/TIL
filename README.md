@@ -25,7 +25,7 @@
 * Thread/동기화
 
 ## **JavaScript**
-
+* [서버와 비동기로 상호작용(AJAX)](https://github.com/dbalsk/TIL/blob/main/JAVASCRIPT/AJAX.md)
 ## **Html**
 * [웹브라우저-서버 (form 태그)](https://github.com/dbalsk/TIL/blob/main/HTML/%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%9C%EB%B2%84.md)
 ## **서버/클라이언트**
