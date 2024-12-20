@@ -26,8 +26,8 @@
 
 ## **JavaScript**
 * [서버와 비동기로 상호작용(AJAX)](https://github.com/dbalsk/TIL/blob/main/JAVASCRIPT/AJAX.md)<br>
-+직렬화/역직렬화<br>
-+동기/비동기/블로킹/논블로킹<br>
++[직렬화/역직렬화](https://github.com/dbalsk/TIL/blob/main/ETC/%EC%A7%81%EB%A0%AC%ED%99%94.md)<br>
++[동기/비동기/블로킹/논블로킹](https://github.com/dbalsk/TIL/blob/main/ETC/%EB%8F%99%EA%B8%B0%ED%99%94.md)<br>
 ## **Html**
 * [웹브라우저-서버 (form 태그)](https://github.com/dbalsk/TIL/blob/main/HTML/%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%9C%EB%B2%84.md)
 ## **서버/클라이언트**
