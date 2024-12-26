@@ -35,7 +35,7 @@
 * 브라우저 요청/응답 과정
 * IP주소
 * 웹서버/WAS
-* [HTML](https://github.com/dbalsk/TIL/blob/main/server/html)      
+* [HTML](https://github.com/dbalsk/TIL/blob/main/SERVER/html.md)     
 ## **Spring Boot**
 * 스프링 프레임워크/스프링부트
 * 스프링부트 프로젝트 
