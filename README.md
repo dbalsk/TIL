@@ -32,9 +32,10 @@
 * [웹브라우저-서버 (form 태그)](https://github.com/dbalsk/TIL/blob/main/HTML/%EC%9B%B9%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%84%9C%EB%B2%84.md)
 ## **서버/클라이언트**
 * Traffic 처리
-* 브라우조 요청/응답 과정
+* 브라우저 요청/응답 과정
 * IP주소
-* 웹서버/WAS        
+* 웹서버/WAS
+* [HTML](https://github.com/dbalsk/TIL/blob/main/server/html)      
 ## **Spring Boot**
 * 스프링 프레임워크/스프링부트
 * 스프링부트 프로젝트 
