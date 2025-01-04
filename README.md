@@ -39,7 +39,9 @@
 ## **Spring Boot**
 * 스프링 프레임워크/스프링부트
 * 컨트롤러/정적리소스
-* [실습) 상품관리 애플리케이션](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98) 
+* [실습) 상품관리 애플리케이션](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98.md)   
++[레이어드 아키텍처 (도메인주도설계)](https://github.com/dbalsk/TIL/tree/main/SpringBoot)<br>
++[DTO/엔티티](https://github.com/dbalsk/TIL/tree/main/SpringBoot)<br>
 
 ## **DataBase**
 
