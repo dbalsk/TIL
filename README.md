@@ -5,6 +5,7 @@
 
 ## **일일 기록**
 * [2024.12](https://github.com/dbalsk/TIL/blob/main/TIL/2024-12.md)
+* [2025.01](https://github.com/dbalsk/TIL/blob/main/TIL/2025-01.md)
 
 ## **Java**
 * [메모리 구조](https://github.com/dbalsk/TIL/blob/main/JAVA/%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B5%AC%EC%A1%B0.md)
@@ -40,7 +41,7 @@
 * 스프링 프레임워크/스프링부트
 * 컨트롤러/정적리소스
 * [실습) 상품관리 애플리케이션](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98.md)   
-+[레이어드 아키텍처 (도메인주도설계)](https://github.com/dbalsk/TIL/tree/main/SpringBoot)<br>
++[도메인주도설계](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EB%8F%84%EB%A9%94%EC%9D%B8%EC%A3%BC%EB%8F%84%EC%84%A4%EA%B3%84.md)<br>
 +[DTO/엔티티](https://github.com/dbalsk/TIL/tree/main/SpringBoot)<br>
 
 ## **DataBase**
