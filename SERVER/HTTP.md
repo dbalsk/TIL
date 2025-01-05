@@ -1,4 +1,4 @@
-# **HTML**
+# **HTTP**
 >HTTP 트랜잭션, HTTP 요청 메소드, HTTP 응답 상태코드를 통해 HTTP에 대해 이해해보자.
   
 ## HTTP 트랜잭션
