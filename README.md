@@ -40,9 +40,10 @@
 ## **Spring Boot**
 * 스프링 프레임워크/스프링부트
 * 컨트롤러/정적리소스
-* [실습) 상품관리 애플리케이션](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98.md)   
+* [상품관리애플리케이션 - 리스트](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98.md)   
 * [도메인주도설계](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EB%8F%84%EB%A9%94%EC%9D%B8%EC%A3%BC%EB%8F%84%EC%84%A4%EA%B3%84.md)<br>
 * [DTO/엔티티](https://github.com/dbalsk/TIL/blob/main/SpringBoot/Dto-%EC%97%94%ED%8B%B0%ED%8B%B0.md)<br>
 * [유효성검사](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EC%9C%A0%ED%9A%A8%EC%84%B1%EA%B2%80%EC%82%AC.md)<br>
 ## **DataBase**
 * [데이터베이스](https://github.com/dbalsk/TIL/blob/main/DataBase/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4.md)
+* [상품관리애플리케이션 - 데이터베이스]()
