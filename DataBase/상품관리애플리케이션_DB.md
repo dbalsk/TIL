@@ -52,7 +52,7 @@ spring.datasource.url=jdbc:mysql://localhost:3306/product_management
 spring.datasource.username=root
 //데이터베이스의 계정 아이디
 spring.datasource.password=비밀번호
-//데이터베이스의 비밀번호
+//데이터베이스의 비밀번호 (추후 암호화 필요 - jasypt 또는 Vault)
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 //데이터베이스 연결 시 사용할 드라이버
 ```
