@@ -83,11 +83,13 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 </br>
 
 ## 상품 추가 기능 구현
-1. (INSERT SQL 쿼리를 보내기 위해) Product 클래스에 각 필드의 **getter 추가**
+1. (INSERT SQL 쿼리를 보내기 위해) Product 클래스에 각 필드의 **getter** 추가 (위 쿼리에서는 id의 getter 필요x)
 2. (데이터베이스에서 id 값을 받아오고 지정하기 위해) JdbcTemplate 의존성을 **NamedParameterJdbcTemplate 의존성**으로 변경 (JdbcTemplate로 상품 id를 받아오는 코드는 좀 더 복잡)
-3. **BeanPropertySqlParameterSource** 사용 (product의 getter를 통해 sql 쿼리의 매개변수를 매핑해주는 객체) 
+3. **SqlParameterSource**로 객체를 매핑
+ > **BeanPropertySqlParameterSource** 사용 (product의 getter를 통해 sql 쿼리의 매개변수를 매핑해주는 객체) 	 
 4. **KeyHolder** 사용 (INSERT 작업 후 데이터베이스에 생성된 키(id)를 가져오는 객체)
-
+5. **update** 메소드 호출
+ 
 ```ruby
     public Product add(Product product){
         KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -111,3 +113,103 @@ JdbcTemplate.update 메소드의 인자로 들어간 SQL 쿼리는 물음표로 
 >```
 >JdbcTemplate.update("INSERT INTO products (name, price, amount) VALUES (?, ?, ?)", product.getName(), product.getPrice(), product.getAmount());
 >```
+
+## 상품 조회 기능 구현 
+**✔ 상품 번호로 조회 기능 (findById 메소드)**
+1. **SqlParameterSource**로 id를 매핑
+> **MapSqlParameterSource** 사용 (Map 형태로 Key-Value 형태를 매핑해주는 객체)  
+> (BeanPropertySqlParameterSource는 객체를 매핑하기에 id 매핑으로는 위 객체가 적절)
+2. queryForObject 메소드 호출 (하나의 Product 조회)
+> 위 메소드의 인자로 **BeanPropertyRowMapper** 받음 (조회된 데이터를 자바의 인스턴스로 변환해주는 객체)  
+3. **BeanPropertyRowMapper**의 작동을 위해 Product의 각 필드에 대한 setter 추가 
+
+```ruby
+    public Product findByID(Long id){
+        SqlParameterSource namedParameter = new MapSqlParameterSource("id", id);
+
+        Product product = namedParameterJdbcTemplate.queryForObject(
+                "SELECT id, name, price, amount FROM products WHERE id=:id", 
+                namedParameter, 
+                new BeanPropertyRowMapper<>(Product.class)
+                //BeanPropertyRowMapper가 변환을 수행하기위해 2가지 과정 필요
+                //1. 인자가 없는 Product 생성자로 Product 인스턴스 생성 2. setter로 각 필드 초기화
+        );
+        return product;
+    }
+```
+
+**✔ 상품 전체 조회 기능 (findAll 메소드)**  
+1. query 메소드 호출 (전체 Product 리스트 조회)
+
+```ruby
+    public List<Product> findAll(){
+        // 전체목록 조회에는 매개변수가 필요없기에 MapSqlParameterSource 필요x
+        List<Product> products = namedParameterJdbcTemplate.query(
+                "SELECT * FROM products",
+                new BeanPropertyRowMapper<>(Product.class)
+        );
+        return products;
+    }
+```
+
+**✔ 문자열로 검색 기능 (findByNameContaining 메소드)**  
+1. **SqlParameterSource**로 name을 매핑
+>**MapSqlParameterSource** 사용 
+2. query 메소드 호출 (name이 포함되는 Product 리스트 조회)
+
+```ruby
+    public List<Product> findByNameContaining(String name){
+        SqlParameterSource namedParameter = new MapSqlParameterSource("name", "%"+name+"%");
+        //"&"를 앞뒤로 붙여 name이 앞,중간,뒤에 포함되는 경우도 검색 (안붙이면 정확히 일치하는 값 검색)
+        
+        List<Product> products = namedParameterJdbcTemplate.query(
+                "SELECT * FROM products WHERE name LIKE :name",
+                namedParameter,
+                new BeanPropertyRowMapper<>(Product.class)
+        );
+        return products;
+    }
+```
+
+## 상품 수정 기능 구현
+1. (UPDATE SQL 쿼리를 보내기 위해) Product 클래스에 **id의 getter** 추가 (나머지 필드의 getter는 이미 추가)
+2. **SqlParameterSource**로 객체를 매핑
+> **BeanPropertySqlParameterSource** 사용
+3. update 메소드 호출
+
+```ruby 
+    public Product update(Product product) {
+        SqlParameterSource namedParameter = new BeanPropertySqlParameterSource(product);
+
+        namedParameterJdbcTemplate.update("UPDATE products SET name=:name, price=:price, amount=:amount WHERE id=:id",
+                namedParameter);
+
+        return product;
+    }
+```
+
+## 상품 삭제 기능 구현
+1. **SqlParameterSource**로 id를 매핑
+> **MapSqlParameterSource** 사용
+2. update 메소드 호출
+
+```ruby
+    public void delete(Long id) {
+        SqlParameterSource namedParameter = new MapSqlParameterSource("id", id);
+
+        namedParameterJdbcTemplate.update(
+                "DELETE FROM products WHERE id=:id",
+                namedParameter
+        );
+    }
+```
+
+>+namedParameterJdbcTemplate의 대표 메소드  
+>1. **query()**: 조회 SQL을 실행하여 객체 리스트를 반환 
+>2. **queryForObject()**: 조회 SQL을 실행하여 하나의 객체를 반환  
+>3. **update()**: 삽입, 수정, 삭제 SQL을 실행  
+
+</br>
+
+## 참고자료
+[이것이백엔드개발이다](https://product.kyobobook.co.kr/detail/S000211834105)  
