@@ -48,3 +48,7 @@
 * [데이터베이스](https://github.com/dbalsk/TIL/blob/main/DataBase/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4.md)
 * [상품관리애플리케이션 - 데이터베이스](https://github.com/dbalsk/TIL/blob/main/DataBase/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98_DB.md)
 * 커넥션
+
+## **객체지향설계 (OOD)** 
+* [상품관리애플리케이션 - 객체지향설계](https://github.com/dbalsk/TIL/blob/main/OOD/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98_OOD.md)
+* 의존성역전원칙 (DIP)
