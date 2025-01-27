@@ -1,5 +1,5 @@
 # **상품 관리 애플리케이션**
-> [리스트로 관리되는 상품관리애플리케이션](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98.md)을 수정하여 **데이터베이스로 관리되는 상품관리애플리케이션**을 만들어본다. 
+**[리스트로 관리되는 상품관리애플리케이션](https://github.com/dbalsk/TIL/blob/main/SpringBoot/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98.md)** 을 수정하여 **데이터베이스로 관리되는 상품관리애플리케이션** 구현
   
 ## 데이터베이스
 도커 데스크톱에서 MySQL 도커 컨테이너로 직접 접속하여 **[데이터베이스](https://github.com/dbalsk/TIL/blob/main/DataBase/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4.md)** 사용 
