@@ -1,5 +1,5 @@
 # **상품 관리 애플리케이션**
-> [데이터베이스로 관리되는 상품관리애플리케이션](https://github.com/dbalsk/TIL/blob/main/DataBase/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98_DB.md)에 객체지향적 설계를 더하여 프로젝트를 완성해보자. 또한 테스트 코드를 작성하여 리팩토링을 진행해보자. 
+**[데이터베이스로 관리되는 상품관리애플리케이션](https://github.com/dbalsk/TIL/blob/main/DataBase/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98_DB.md)** 에 **객체지향적 설계 추가** 및 **리팩토링**을 하여 프로젝트 완성
   
 ## 추상화
 >클래스를 추상화함으로써 유연성을 높이는 설계로 개선해보자. 
