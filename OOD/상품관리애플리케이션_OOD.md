@@ -76,4 +76,147 @@
 
 
 -> 즉, **의존성 역전 원칙**을 구현하기 위해 **추상화**를 사용하여 구체적인 구현이 아닌 인터페이스에 의존하도록 설계하고, **의존성 주입**을 통해 해당 인터페이스의 구현체를 외부에서 주입받았다. 
-          
+
+
+## 리팩토링
+>리팩토링을 통해 결과의 변경없이 코드의 구조를 개선해보고, 통합테스트/단위테스트를 사용하여 리팩토링이 정상적으로 완료됐는지 확인해보자.
+
+**✔ 리팩토링 (Refactoring)**  
+동일한 입력에 대해 **결과의 변경없이** 코드의 구조 개선
+
+
+**✔ 테스트 코드**  
+작성한 로직을 테스트하기 위한 코드 -> 리팩토링 후 기존과 동일하게 작동하는지 확인 가능  
+
+- **통합테스트**: 2개 이상의 모듈(클래스or컴포넌트)을 검증하는 테스트
+  - 여러 계층의 테스트 및 계층 간 연동성 확인 
+  - 실행속도 느림
+  - 외부 의존성 사용 (DB, 서버 등) -> 실제환경과 비슷한 테스트 
+- **단위테스트**: 개별 모듈을 독립적으로 검증하는 테스트 
+  - 특정 메소드/클래스의 테스트
+  - 실행속도 빠름
+  - 외부 의존성 x -> Mock 사용 
+
+>**+모킹(mocking)**  
+>Mock 객체를 만들어 의존성을 제거하고 독립적으로 테스트 
+
+**✔ 리팩토링 및 테스트 코드 작성**    
+- 리팩토링: ModelMapper 제거하고 Product-Dto 변환을 수행하는 메소드 구현 
+  - Dto가 엔티티를 의존하도록 구현 (도메인 계층은 다른 계정 의존 x)
+  - 생성자를 사용하여 구현 
+  
+```ruby
+    //ProductDto에 두 메소드 모두 구현 
+
+    //Dto -> 엔티티 변환
+    public static Product toEntity(ProductDto productDto){
+        Product product = new Product(
+                productDto.getId(),
+                productDto.getName(),
+                productDto.getPrice(),
+                productDto.getAmount()
+        );
+
+        return product;
+    }
+
+    //엔티티 -> Dto 변환
+    public static ProductDto toDto(Product product){
+        ProductDto productDto = new ProductDto(
+                product.getId(),
+                product.getName(),
+                product.getPrice(),
+                product.getAmount()
+        );
+
+        return productDto;
+    }
+
+```
+
+- 통합테스트 
+  - 테스트 코드1: add, findById 작동 테스트 
+  - 테스트 코드2: findById 예외 발생 테스트
+
+```ruby
+@SpringBootTest //스프링부트를 실행하는 통합 테스트 (필요한 의존성을 빈으로 등록 및 주입)
+@ActiveProfiles("test") //테스트 코드에서 사용할 profile 지정 
+class SimpleProductServiceTest {
+
+    @Autowired 
+    SimpleProductService  simpleProductService;
+
+    //@Transactional //트랜잭셔널한 처리를 위해 사용 (테스트 코드에 사용할 경우 테스트 후 커밋이 아닌 롤백)
+    //데이터베이스 사용 시 주석 해제
+    @Test 
+    @DisplayName("상품을 추가한 후 id로 조회하면 해당 상품이 조회되어야 한다.") //테스트 코드1
+    void productAddAndFindByIdTest (){
+        ProductDto productDto = new ProductDto("연필", 300, 20); //테스트이기에 생성자가 아닌 필드에 바로 주입
+
+        ProductDto savedProductDto = simpleProductService.add(productDto);
+        Long savedProductId = savedProductDto.getId();
+
+        ProductDto foundProductDto = simpleProductService.findById(savedProductId);
+
+        //assertTrue 메소드로 성공 및 실패 여부 자동으로 확인 
+        //동등성 비교를 위해 equals 메소드 사용
+        //데이터베이스의 findById는 새로운 Product 인스턴스를 생성하는 구조이기에 동일성 비교 시(==) 테스트 실패
+        assertTrue(savedProductDto.getId().equals(foundProductDto.getId()));
+        assertTrue(savedProductDto.getName().equals(foundProductDto.getName()));
+        assertTrue(savedProductDto.getPrice().equals(foundProductDto.getPrice()));
+        assertTrue(savedProductDto.getAmount().equals(foundProductDto.getAmount()));
+    }
+
+    @Test
+    @DisplayName("존재하지 않는 상품 id로 조회하면 EntityNotFoundException이 발생해야한다.") //테스트 코드2
+    void findProductNotExistIdTest(){
+        Long notExistId = -1L;
+
+        //assertThrows 메소드로 예외발생 테스트 
+        //assertThrows 메소드의 인자 1. 어떤 예외가 발생해야하는지 2. 예외가 발생해야할 코드 
+        assertThrows(EntityNotFoundException.class, ()->{
+           simpleProductService.findById(notExistId);
+        });
+    }
+}
+```
+
+  -> 위의 경우 특정 메소드를 테스트하기에 통합 테스트로 적절하지 않음. 즉, 단위 테스트로 구현하는 것이 적절
+
+
+- 단위테스트: add 작동 테스트
+
+```ruby
+@ExtendWith(MockitoExtension.class) //모킹을 사용하여 단위테스트 (스프링부트 실행x)
+public class SimpleProductServiceUnitTest {
+    @Mock //해당 의존성에 목 객체 주입 (주입만으로는 아무 기능 x)
+    private ProductRepository productRepository;
+    @Mock //모킹을 하지 않더라도 목 객체 주입해야함.
+    private ValidationService validationService;
+
+    @InjectMocks //@Mock으로 주입한 목 객체들을 simpleProductService 내에 있는 의존성에 주입
+    private  SimpleProductService simpleProductService; //실제 인스턴스 생성
+
+    @Test
+    @DisplayName("상품 추가 후에는 추가된 상품이 반환되어야한다") 
+    void productAddTest (){
+        ProductDto productDto = new ProductDto("연필", 300, 20);
+        Long PRODUCT_ID = 1L;
+
+        Product product = ProductDto.toEntity(productDto);
+        product.setId(PRODUCT_ID);
+
+        //when 메소드로 목 객체의 동작 정의 
+        //when(A).thenReturn(B) -> 목 객체가 A에 해당하는 동작을 수행할 때 B에 있는 값을 반환
+        when(productRepository.add(any())).thenReturn(product);
+
+        ProductDto savedProductDto = simpleProductService.add(productDto);
+
+        assertTrue(savedProductDto.getId().equals(PRODUCT_ID));
+        assertTrue(savedProductDto.getName().equals(productDto.getName()));
+        assertTrue(savedProductDto.getPrice().equals(productDto.getPrice()));
+        assertTrue(savedProductDto.getAmount().equals(productDto.getAmount()));
+    }
+
+}
+```
