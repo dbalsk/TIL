@@ -12,10 +12,9 @@
 * [메모리 구조](https://github.com/dbalsk/TIL/blob/main/JAVA/%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B5%AC%EC%A1%B0.md)
 * [입출력 비교](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%9E%85%EC%B6%9C%EB%A0%A5%EB%B9%84%EA%B5%90.md)
 * [동일성/동등성](https://github.com/dbalsk/TIL/blob/main/JAVA/%EB%8F%99%EC%9D%BC%EC%84%B1-%EB%8F%99%EB%93%B1%EC%84%B1.md)
-* 클래스
-    * [클래스](https://github.com/dbalsk/TIL/blob/main/JAVA/%ED%81%B4%EB%9E%98%EC%8A%A4.md)
-    * [상속/조합](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%83%81%EC%86%8D-%EC%A1%B0%ED%95%A9.md)
-    * [추상클래스/인터페이스](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%B6%94%EC%83%81%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4.md)
+* [클래스](https://github.com/dbalsk/TIL/blob/main/JAVA/%ED%81%B4%EB%9E%98%EC%8A%A4.md)
+* [상속/조합](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%83%81%EC%86%8D-%EC%A1%B0%ED%95%A9.md)
+* [추상클래스/인터페이스](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%B6%94%EC%83%81%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4.md)
 * 객체지향 (추상화/다형성)
 * 컬렉션
     * 컬렉션 계층도 
