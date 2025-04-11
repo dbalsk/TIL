@@ -60,3 +60,9 @@
 * [상품관리애플리케이션 - 객체지향설계](https://github.com/dbalsk/TIL/blob/main/OOD/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98_OOD.md)
 * 의존성역전원칙 (DIP)
 * 리팩토링/테스트코드
+
+## **UMC 8기**
+* **[Chapter 1. Database 설계](https://sweltering-diadem-a68.notion.site/Chapter-1-Database-1be55b9ff8dd80a78831e83162d193dc?pvs=74)**
+* **[Chapter 2. sql](https://sweltering-diadem-a68.notion.site/Chapter-2-sql-1c255b9ff8dd80efb417cc7009e3cd07?pvs=4)**
+* **[Chapter 3. API URL 설계](https://sweltering-diadem-a68.notion.site/Chapter-3-API-URL-1c855b9ff8dd8028895ef5dfa59b07a7?pvs=4)**
+* **[Chapter 4. Spring Boot의 코어 개념 ](https://sweltering-diadem-a68.notion.site/Chapter-4-Spring-Boot-1ce55b9ff8dd8049867dd3a02a34dd5c?pvs=4)**
