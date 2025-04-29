@@ -61,6 +61,11 @@
 * 의존성역전원칙 (DIP)
 * 리팩토링/테스트코드
 
+## **디자인 패턴**
+* 생성 패턴
+* 구조 패턴
+* 행동 패턴
+  
 ## **UMC 8기**
 * **[Chapter 1. Database 설계](https://sweltering-diadem-a68.notion.site/Chapter-1-Database-1be55b9ff8dd80a78831e83162d193dc?pvs=74)**
 * **[Chapter 2. sql](https://sweltering-diadem-a68.notion.site/Chapter-2-sql-1c255b9ff8dd80efb417cc7009e3cd07?pvs=4)**
