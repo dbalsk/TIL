@@ -64,7 +64,7 @@
 
 ## **디자인 패턴**
 * 생성 패턴
-* 구조 패턴
+* [구조 패턴](https://github.com/dbalsk/TIL/blob/main/DesignPattern/StructuralPattern.md) 
 * 행동 패턴
   
 ## **UMC 8기**
