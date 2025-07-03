@@ -74,4 +74,8 @@
 * **[Chapter 3. API URL 설계](https://sweltering-diadem-a68.notion.site/Chapter-3-API-URL-1c855b9ff8dd8028895ef5dfa59b07a7?pvs=4)**
 * **[Chapter 4. Spring Boot의 코어 개념 ](https://sweltering-diadem-a68.notion.site/Chapter-4-Spring-Boot-1ce55b9ff8dd8049867dd3a02a34dd5c?pvs=4)**
 * **[Chapter 5. JPA 기초 및 프로젝트 구조 ](https://sweltering-diadem-a68.notion.site/Chapter-5-JPA-1e355b9ff8dd802cb4a2d6081e596ea9)**
-
+* **[Chapter 6. JPA 활용](https://sweltering-diadem-a68.notion.site/Chapter-6-JPA-1ee55b9ff8dd80b29e5df0c5703e40b2?pvs=74)**
+* **[Chapter 7. API 응답 통일 & 에러 핸들러](https://sweltering-diadem-a68.notion.site/Chapter-7-API-1f255b9ff8dd801885c1dec13752c4c9)**
+* **[Chapter 8. API & Swagger & Annotation](https://sweltering-diadem-a68.notion.site/Chapter-8-API-Swagger-Annotation-1f955b9ff8dd80079ad1e3e5570eee64)**
+* **[Chapter 9. API & Paging ](https://sweltering-diadem-a68.notion.site/Chapter-9-API-Paging-20055b9ff8dd8011b87ae45f9966672a?pvs=74)**
+* **[Chapter 10. 로그인 및 회원 가입](https://sweltering-diadem-a68.notion.site/Chapter-10-21955b9ff8dd8066b69dcbefc8c546b7)**
