@@ -21,6 +21,8 @@
 * [AWS 입문/실전 - JSCODE](https://sweltering-diadem-a68.notion.site/AWS-JSCODE-21a55b9ff8dd80aa8645c4228d39f401?source=copy_link)
 * [스프링 입문 - 김영한](https://sweltering-diadem-a68.notion.site/21955b9ff8dd8072b5d1df82852f8277?source=copy_link)
 * [스프링 기본 - 김영한](https://sweltering-diadem-a68.notion.site/23255b9ff8dd8039a879f875e8cf9e17?source=copy_link)
+## **프로젝트 기록**
+* [콕플 개발 기록](https://sweltering-diadem-a68.notion.site/22a55b9ff8dd803eb3afc1dc9389540e?pvs=74)
 ## **Java**
 * [메모리 구조](https://github.com/dbalsk/TIL/blob/main/JAVA/%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B5%AC%EC%A1%B0.md)
 * [입출력 비교](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%9E%85%EC%B6%9C%EB%A0%A5%EB%B9%84%EA%B5%90.md)
