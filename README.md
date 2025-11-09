@@ -13,17 +13,20 @@
 * [2025.06](https://github.com/dbalsk/TIL/blob/main/TIL/2025-06.md)
 * [2025.07](https://github.com/dbalsk/TIL/blob/main/TIL/2025-07.md)
 * [2025.08](https://github.com/dbalsk/TIL/blob/main/TIL/2025-08.md)
-* [2025.09](https://github.com/dbalsk/TIL/blob/main/TIL/2025-09.md)
+* [2025.11](https://github.com/dbalsk/TIL/blob/main/TIL/2025-11.md)
 ## **핵심 정리**
 * [스프링](https://sweltering-diadem-a68.notion.site/22655b9ff8dd80efafa9de16a58a6c9e?source=copy_link)
 * [Git 및 협업](https://sweltering-diadem-a68.notion.site/Git-22555b9ff8dd80e18451d6361707bb05?source=copy_link)
+## **프로젝트 기록**
+* [콕플 개발 기록](https://sweltering-diadem-a68.notion.site/22a55b9ff8dd803eb3afc1dc9389540e?pvs=74)
+* [루핀 개발 기록](https://sweltering-diadem-a68.notion.site/27c55b9ff8dd8009ba48ef263072acd2?pvs=74)
 * [에러 기록](https://sweltering-diadem-a68.notion.site/22f55b9ff8dd80088434dc785be62359?source=copy_link)
-## **인프런 학습 정리**
+## **인프런 학습**
 * [AWS 입문/실전 - JSCODE](https://sweltering-diadem-a68.notion.site/AWS-JSCODE-21a55b9ff8dd80aa8645c4228d39f401?source=copy_link)
 * [스프링 입문 - 김영한](https://sweltering-diadem-a68.notion.site/21955b9ff8dd8072b5d1df82852f8277?source=copy_link)
 * [스프링 기본 - 김영한](https://sweltering-diadem-a68.notion.site/23255b9ff8dd8039a879f875e8cf9e17?source=copy_link)
-## **프로젝트 기록**
-* [콕플 개발 기록](https://sweltering-diadem-a68.notion.site/22a55b9ff8dd803eb3afc1dc9389540e?pvs=74)
+## **개발도서 학습**
+* [RealMySQL8.0 - 아키텍처](https://github.com/dbalsk/TIL/blob/main/RealMySQL8.0/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.md)
 ## **Java**
 * [메모리 구조](https://github.com/dbalsk/TIL/blob/main/JAVA/%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B5%AC%EC%A1%B0.md)
 * [입출력 비교](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%9E%85%EC%B6%9C%EB%A0%A5%EB%B9%84%EA%B5%90.md)
@@ -71,7 +74,7 @@
 * SQL 기본문법
 
 ## **객체지향설계 (OOD)** 
-* [상품관리애플리케이션 - 객체지향설계](https://github.com/dbalsk/TIL/blob/main/OOD/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98_OOD.md)
+* [상품관리애플리케이션 - OOD 및 테스트](https://github.com/dbalsk/TIL/blob/main/OOD/%EC%83%81%ED%92%88%EA%B4%80%EB%A6%AC%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98_OOD%20%EB%B0%8F%20%ED%85%8C%EC%8A%A4%ED%8A%B8.md))
 * [객체 지향 설계 5가지 원칙 (SOLID)](https://sweltering-diadem-a68.notion.site/5-SOLID-23255b9ff8dd800a82e9f7f0d158c573?source=copy_link)
 * 리팩토링/테스트코드
 
