@@ -27,6 +27,9 @@
 * [스프링 기본 - 김영한](https://sweltering-diadem-a68.notion.site/23255b9ff8dd8039a879f875e8cf9e17?source=copy_link)
 ## **개발도서 학습**
 * [RealMySQL8.0 - 아키텍처](https://github.com/dbalsk/TIL/blob/main/RealMySQL8.0/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.md)
+* [RealMySQL8.0 - 아키텍처](https://github.com/dbalsk/TIL/blob/main/RealMySQL8.0/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%982.md)
+* [RealMySQL8.0 - 아키텍처](https://github.com/dbalsk/TIL/blob/main/RealMySQL8.0/%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98.md)
+* [RealMySQL8.0 - 아키텍처](https://github.com/dbalsk/TIL/blob/main/RealMySQL8.0/%EC%9D%B8%EB%8D%B1%EC%8A%A4.md)
 ## **Java**
 * [메모리 구조](https://github.com/dbalsk/TIL/blob/main/JAVA/%EB%A9%94%EB%AA%A8%EB%A6%AC%EA%B5%AC%EC%A1%B0.md)
 * [입출력 비교](https://github.com/dbalsk/TIL/blob/main/JAVA/%EC%9E%85%EC%B6%9C%EB%A0%A5%EB%B9%84%EA%B5%90.md)
